@@ -1,7 +1,7 @@
-﻿A PostgreSQL provider for (version 3 of) the ASP.NET Identity membership system
+﻿A PostgreSQL provider fo the ASP.NET 5 Identity membership system 
 Available from https://github.com/mhowlett/AspNet.Identity.StorageProviders
 
-This work is derived from:
+This work is, in part, derived from:
 
 1. Microsoft.AspNet.Identity.EntityFramework, available at: https://github.com/aspnet/Identity 
    which is released under the following terms:
@@ -35,5 +35,5 @@ This work is derived from:
 
    --- 
 
-   Additional work (c) Matt Howlett 2015, licensed under the Apache License, Version 2.0. 
-   See http://www.apache.org/licenses/LICENSE-2.0 for license information.
+Additional work (c) Matt Howlett 2015, licensed under the Apache License, Version 2.0. 
+See http://www.apache.org/licenses/LICENSE-2.0 for license information.
