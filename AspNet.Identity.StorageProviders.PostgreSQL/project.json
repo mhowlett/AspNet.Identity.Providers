@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
 
-  "description": "PostgreSQL storage provider for ASP.NET Identity v3",
+  "description": "PostgreSQL storage provider for the ASP.NET 5 Identity membership system (Identity version 3). For more information refer to https://github.com/mhowlett/AspNet.Identity.StorageProviders",
 
   "dependencies": {
     "Microsoft.AspNet.Identity": "3.0.0-beta4",

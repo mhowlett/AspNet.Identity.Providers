@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
 
-  "description": "Common functionality for ASP.NET Identity v3 storage providers.",
+  "description": "Common functionality for ASP.NET 5 Identity membership system (i.e. version 3) storage providers. For more information refer to https://github.com/mhowlett/AspNet.Identity.StorageProviders",
 
   "dependencies": {
     "Microsoft.AspNet.Identity": "3.0.0-beta4"
