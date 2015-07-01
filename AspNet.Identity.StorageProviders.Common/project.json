@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0",
+
+  "description": "Common functionality for ASP.NET Identity v3 storage providers.",
+
+  "dependencies": {
+    "Microsoft.AspNet.Identity": "3.0.0-beta4"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}

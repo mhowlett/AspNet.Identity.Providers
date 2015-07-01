@@ -1,0 +1,6 @@
+{
+    "projects": [
+    	"AspNet.Identity.StorageProviders.Common",
+    	"AspNet.Identity.StorageProviders.PostgreSQL"
+    ]
+}

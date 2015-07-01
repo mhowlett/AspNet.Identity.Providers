@@ -1,0 +1,6 @@
+*~
+*/*~
+*/*.lock.json
+*/*.xproj.user
+.vs
+*/.vs

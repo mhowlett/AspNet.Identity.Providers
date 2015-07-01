@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNet.Identity.StorageProviders.Common", "AspNet.Identity.StorageProviders.Common\AspNet.Identity.StorageProviders.Common.xproj", "{269E99F5-5D60-4682-88F5-6ECAF93EFAB2}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNet.Identity.StorageProviders.PostgreSQL", "AspNet.Identity.StorageProviders.PostgreSQL\AspNet.Identity.StorageProviders.PostgreSQL.xproj", "{59933564-00C2-4DBE-AE0D-8388CCA78D0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{269E99F5-5D60-4682-88F5-6ECAF93EFAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269E99F5-5D60-4682-88F5-6ECAF93EFAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269E99F5-5D60-4682-88F5-6ECAF93EFAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269E99F5-5D60-4682-88F5-6ECAF93EFAB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59933564-00C2-4DBE-AE0D-8388CCA78D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59933564-00C2-4DBE-AE0D-8388CCA78D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59933564-00C2-4DBE-AE0D-8388CCA78D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59933564-00C2-4DBE-AE0D-8388CCA78D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

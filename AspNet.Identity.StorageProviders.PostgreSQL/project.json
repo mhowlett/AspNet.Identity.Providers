@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0",
+
+  "description": "PostgreSQL storage provider for ASP.NET Identity v3",
+
+  "dependencies": {
+    "Microsoft.AspNet.Identity": "3.0.0-beta4",
+    "System.Data.Common": "4.0.0-*",
+    "Npgsql": "2.2.5",
+    "AspNet.Identity.StorageProviders.Common": ""
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}
