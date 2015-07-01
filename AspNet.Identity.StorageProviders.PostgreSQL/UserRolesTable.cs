@@ -43,7 +43,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
             var rows = _database.Query(commandText, parameters);
             foreach (var row in rows)
             {
-                roles.Add(row["Name"]);
+                roles.Add(row["name"]);
             }
 
             return roles;

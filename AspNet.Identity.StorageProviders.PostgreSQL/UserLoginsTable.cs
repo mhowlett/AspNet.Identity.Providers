@@ -101,7 +101,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
             var rows = _database.Query(commandText, parameters);
             foreach (var row in rows)
             {
-                var login = new UserLoginInfo(row["LoginProvider"], row["ProviderKey"], row["DisplayName"]);
+                var login = new UserLoginInfo(row["loginprovider"], row["providerkey"], row["displayname"]);
                 logins.Add(login);
             }
 

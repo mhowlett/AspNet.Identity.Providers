@@ -27,7 +27,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
             var rows = _database.Query(commandText, parameters);
             foreach (var row in rows)
             {
-                Claim claim = new Claim(row["ClaimType"], row["ClaimValue"]);
+                Claim claim = new Claim(row["claimtype"], row["claimvalue"]);
                 claims.AddClaim(claim);
             }
 

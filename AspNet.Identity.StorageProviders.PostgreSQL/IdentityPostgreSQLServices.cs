@@ -2,18 +2,18 @@
 // For credits, copyright an license information refer to LICENSE.txt
 
 using System;
+using System.Collections.Generic;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.AspNet.Identity;
-
 
 namespace AspNet.Identity.StorageProviders.PostgreSQL
 {
     /// <summary>
-    /// Default services
+    ///     Default services
     /// </summary>
     public class IdentityPostgreSQLServices
     {
-        public static IServiceCollection GetDefaultServices(Type userType, Type roleType, Type databaseType, Type keyType = null)
+        public static IEnumerable<ServiceDescriptor> GetDefaultServices(Type userType, Type roleType, Type databaseType, Type keyType = null)
         {
             Type userStoreType;
             Type roleStoreType;
@@ -28,13 +28,16 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
                 roleStoreType = typeof(RoleStore<,>).MakeGenericType(roleType, databaseType);
             }
 
-            var services = new ServiceCollection();
-            services.AddScoped(
+            // why is ServiceCollection no longer available?
+            var services = new List<ServiceDescriptor>();
+            services.Add(
+                new ServiceDescriptor(
                 typeof(IUserStore<>).MakeGenericType(userType),
-                userStoreType);
-            services.AddScoped(
+                userStoreType, ServiceLifetime.Scoped));
+            services.Add(
+                new ServiceDescriptor(
                 typeof(IRoleStore<>).MakeGenericType(roleType),
-                roleStoreType);
+                roleStoreType, ServiceLifetime.Scoped));
             return services;
         }
     }

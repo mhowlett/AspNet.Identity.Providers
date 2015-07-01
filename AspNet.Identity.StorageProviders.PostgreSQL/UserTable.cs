@@ -85,12 +85,12 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
             {
                 var row = rows[0];
                 user = (TUser)Activator.CreateInstance(typeof(TUser));
-                user.Id = stringToId(row["Id"]);
-                user.UserName = row["UserName"];
-                user.PasswordHash = string.IsNullOrEmpty(row["PasswordHash"]) ? null : row["PasswordHash"];
-                user.SecurityStamp = string.IsNullOrEmpty(row["SecurityStamp"]) ? null : row["SecurityStamp"];
-                user.Email = string.IsNullOrEmpty(row["Email"]) ? null : row["Email"];
-                user.EmailConfirmed = row["EmailConfirmed"] == "True";
+                user.Id = stringToId(row["id"]);
+                user.UserName = row["username"];
+                user.PasswordHash = string.IsNullOrEmpty(row["passwordhash"]) ? null : row["passwordhash"];
+                user.SecurityStamp = string.IsNullOrEmpty(row["securitystamp"]) ? null : row["securitystamp"];
+                user.Email = string.IsNullOrEmpty(row["email"]) ? null : row["email"];
+                user.EmailConfirmed = row["emailconfirmed"] == "True";
             }
 
             return user;
@@ -115,12 +115,12 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
             foreach (var row in rows)
             {
                 TUser user = (TUser)Activator.CreateInstance(typeof(TUser));
-                user.Id = stringToId(row["Id"]);
-                user.UserName = row["UserName"];
-                user.PasswordHash = string.IsNullOrEmpty(row["PasswordHash"]) ? null : row["PasswordHash"];
-                user.SecurityStamp = string.IsNullOrEmpty(row["SecurityStamp"]) ? null : row["SecurityStamp"];
-                user.Email = string.IsNullOrEmpty(row["Email"]) ? null : row["Email"];
-                user.EmailConfirmed = row["EmailConfirmed"] == "True";
+                user.Id = stringToId(row["id"]);
+                user.UserName = row["username"];
+                user.PasswordHash = string.IsNullOrEmpty(row["passwordhash"]) ? null : row["passwordhash"];
+                user.SecurityStamp = string.IsNullOrEmpty(row["securitystamp"]) ? null : row["securitystamp"];
+                user.Email = string.IsNullOrEmpty(row["email"]) ? null : row["email"];
+                user.EmailConfirmed = row["emailconfirmed"] == "True";
                 users.Add(user);
             }
 
@@ -146,12 +146,12 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
             foreach (var row in rows)
             {
                 TUser user = (TUser)Activator.CreateInstance(typeof(TUser));
-                user.Id = stringToId(row["Id"]);
-                user.UserName = row["UserName"];
-                user.PasswordHash = string.IsNullOrEmpty(row["PasswordHash"]) ? null : row["PasswordHash"];
-                user.SecurityStamp = string.IsNullOrEmpty(row["SecurityStamp"]) ? null : row["SecurityStamp"];
-                user.Email = string.IsNullOrEmpty(row["Email"]) ? null : row["Email"];
-                user.EmailConfirmed = row["EmailConfirmed"] == "True";
+                user.Id = stringToId(row["id"]);
+                user.UserName = row["username"];
+                user.PasswordHash = string.IsNullOrEmpty(row["passwordhash"]) ? null : row["passwordhash"];
+                user.SecurityStamp = string.IsNullOrEmpty(row["securitystamp"]) ? null : row["securitystamp"];
+                user.Email = string.IsNullOrEmpty(row["email"]) ? null : row["email"];
+                user.EmailConfirmed = row["emailconfirmed"] == "True";
                 users.Add(user);
             }
 

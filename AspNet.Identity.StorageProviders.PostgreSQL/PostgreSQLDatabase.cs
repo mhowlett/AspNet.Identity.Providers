@@ -4,7 +4,7 @@
 using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Data.Common;
 using System.Threading;
 
 
@@ -212,13 +212,13 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         private void OpenConnection()
         {
             var retries = 10;
-            if (_connection.State == ConnectionState.Open)
+            if (_connection.State == System.Data.ConnectionState.Open)
             {
                 return;
             }
             else
             {
-                while (retries >= 0 && _connection.State != ConnectionState.Open)
+                while (retries >= 0 && _connection.State != System.Data.ConnectionState.Open)
                 {
                     _connection.Open();
                     retries--;
@@ -233,7 +233,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// </summary>
         public void CloseConnection()
         {
-            if (_connection.State == ConnectionState.Open)
+            if (_connection.State == System.Data.ConnectionState.Open)
             {
                 _connection.Close();
             }
