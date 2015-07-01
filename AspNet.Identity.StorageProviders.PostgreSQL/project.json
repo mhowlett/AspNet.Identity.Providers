@@ -7,7 +7,7 @@
     "Microsoft.AspNet.Identity": "3.0.0-beta4",
     "System.Data.Common": "4.0.0-*",
     "Npgsql": "2.2.5",
-    "AspNet.Identity.StorageProviders.Common": ""
+    "AspNet.Identity.StorageProviders.Common": "0.1"
   },
 
   "frameworks": {
