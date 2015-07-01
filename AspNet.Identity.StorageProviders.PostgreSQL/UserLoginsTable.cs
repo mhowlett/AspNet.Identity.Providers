@@ -31,7 +31,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public int Delete(string userId, string loginProvider, string providerKey)
         {
-            string commandText = "DELETE FROM \"AspNetUserLogins\" WHERE \"UserId\" = @userId AND \"LoginProvider\" = @loginProvider AND \"ProviderKey\" = @providerKey";
+            string commandText = "DELETE FROM AspNetUserLogins WHERE UserId = @userId AND LoginProvider = @loginProvider AND ProviderKey = @providerKey";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("UserId", userId);
             parameters.Add("loginProvider", loginProvider);
@@ -47,7 +47,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public int Delete(string userId)
         {
-            string commandText = "DELETE FROM \"AspNetUserLogins\" WHERE \"UserId\" = @userId";
+            string commandText = "DELETE FROM AspNetUserLogins WHERE UserId = @userId";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("UserId", userId);
 
@@ -62,7 +62,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public int Insert(string userId, UserLoginInfo login)
         {
-            string commandText = "INSERT INTO \"AspNetUserLogins\" (\"LoginProvider\", \"ProviderKey\", \"UserId\", \"DisplayName\") VALUES (@loginProvider, @providerKey, @userId, @displayName)";
+            string commandText = "INSERT INTO AspNetUserLogins (LoginProvider, ProviderKey, UserId, DisplayName) VALUES (@loginProvider, @providerKey, @userId, @displayName)";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("loginProvider", login.LoginProvider);
             parameters.Add("providerKey", login.ProviderKey);
@@ -79,7 +79,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public string FindUserIdByLogin(UserLoginInfo userLogin)
         {
-            string commandText = "SELECT \"UserId\" FROM \"AspNetUserLogins\" WHERE \"LoginProvider\" = @loginProvider AND \"ProviderKey\" = @providerKey";
+            string commandText = "SELECT UserId FROM AspNetUserLogins WHERE LoginProvider = @loginProvider AND ProviderKey = @providerKey";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("loginProvider", userLogin.LoginProvider);
             parameters.Add("providerKey", userLogin.ProviderKey);
@@ -95,7 +95,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         public List<UserLoginInfo> FindByUserId(string userId)
         {
             List<UserLoginInfo> logins = new List<UserLoginInfo>();
-            string commandText = "SELECT * FROM \"AspNetUserLogins\" WHERE \"UserId\" = @userId";
+            string commandText = "SELECT * FROM AspNetUserLogins WHERE UserId = @userId";
             Dictionary<string, object> parameters = new Dictionary<string, object>() { { "@userId", userId } };
 
             var rows = _database.Query(commandText, parameters);

@@ -38,8 +38,8 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
 
             var roles = new List<string>();
             // TODO: This probably does not work, and may need testing.
-            string commandText = "SELECT \"AspNetRoles\".\"Name\" FROM \"AspNetUsers\", \"AspNetRoles\", \"AspNetUserRoles\" ";
-            commandText += "WHERE \"AspNetUsers\".\"Id\" = \"AspNetUserRoles\".\"UserId\" AND \"AspNetUserRoles\".\"RoleId\" = \"AspNetRoles\".\"Id\";";
+            string commandText = "SELECT AspNetRoles.Name FROM AspNetUsers, AspNetRoles, AspNetUserRoles ";
+            commandText += "WHERE AspNetUsers.Id = AspNetUserRoles.UserId AND AspNetUserRoles.RoleId = AspNetRoles.Id";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@userId", userId);
 
@@ -64,7 +64,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public int Delete(string userId)
         {
-            string commandText = "DELETE FROM \"AspNetRoles\" WHERE \"UserId\" = @userId";
+            string commandText = "DELETE FROM AspNetRoles WHERE UserId = @userId";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("UserId", userId);
 
@@ -73,7 +73,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
 
         public int Delete(string userId, string roleId)
         {
-            string commandText = "DELETE FROM \"AspNetRoles\" WHERE \"UserId\" = @userId AND \"RoleId\" = @roleId";
+            string commandText = "DELETE FROM AspNetRoles WHERE UserId = @userId AND RoleId = @roleId";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("UserId", userId);
             parameters.Add("RoleId", roleId);
@@ -89,7 +89,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public int Insert(string userId, string roleId) 
         {
-            string commandText = "INSERT INTO \"AspNetUserRoles\" (\"UserId\", \"RoleId\") VALUES (@userId, @roleId)";
+            string commandText = "INSERT INTO AspNetUserRoles (UserId, RoleId) VALUES (@userId, @roleId)";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("userId", userId);
             parameters.Add("roleId", roleId);

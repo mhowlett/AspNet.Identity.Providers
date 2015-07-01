@@ -21,7 +21,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         public ClaimsIdentity FindByRoleId(string roleId)
         {
             ClaimsIdentity claims = new ClaimsIdentity();
-            string commandText = "SELECT * FROM \"AspNetRoleClaims\" WHERE \"RoleId\" = @roleId";
+            string commandText = "SELECT * FROM AspNetRoleClaims WHERE RoleId = @roleId";
             Dictionary<string, object> parameters = new Dictionary<string, object>() { { "@RoleId", roleId } };
 
             var rows = _database.Query(commandText, parameters);
@@ -36,7 +36,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
 
         public int Insert(Claim roleClaim, string roleId)
         {
-            string commandText = "INSERT INTO \"AspNetRoleClaims\" (\"ClaimValue\", \"ClaimType\", \"RoleId\") VALUES (@value, @type, @roleId)";
+            string commandText = "INSERT INTO AspNetRoleClaims (ClaimValue, ClaimType, RoleId) VALUES (@value, @type, @roleId)";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("value", roleClaim.Value);
             parameters.Add("type", roleClaim.Type);
@@ -47,7 +47,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
 
         public int Delete(string roleId, Claim claim)
         {
-            string commandText = "DELETE FROM \"AspNetRoleClaims\" WHERE \"RoleId\" = @roleId AND @ClaimValue = @value AND ClaimType = @type";
+            string commandText = "DELETE FROM AspNetRoleClaims WHERE RoleId = @roleId AND @ClaimValue = @value AND ClaimType = @type";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("roleId", roleId);
             parameters.Add("value", claim.Value);
@@ -61,7 +61,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// </summary>
         public int Delete(string roleId)
         {
-            string commandText = "DELETE FROM \"AspNetRoleClaims\" WHERE \"RoleId\" = @roleId";
+            string commandText = "DELETE FROM AspNetRoleClaims WHERE RoleId = @roleId";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("roleId", roleId);
 

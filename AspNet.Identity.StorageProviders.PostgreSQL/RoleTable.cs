@@ -33,7 +33,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public int Delete(string roleId)
         {
-            string commandText = "DELETE FROM \"AspNetRoles\" WHERE \"Id\" = @id";
+            string commandText = "DELETE FROM AspNetRoles WHERE Id = @id";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@id", roleId);
 
@@ -47,7 +47,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public int Insert(IdentityRole<TKey> role)
         {
-            string commandText = "INSERT INTO \"AspNetRoles\" (\"Id\", \"Name\") VALUES (@id, @name)";
+            string commandText = "INSERT INTO AspNetRoles (Id, Name) VALUES (@id, @name)";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@name", role.Name);
             parameters.Add("@id", role.Id);
@@ -62,7 +62,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns>Role name.</returns>
         public string GetRoleName(string roleId)
         {
-            string commandText = "SELECT \"Name\" FROM \"AspNetRoles\" WHERE \"Id\" = @id";
+            string commandText = "SELECT Name FROM AspNetRoles WHERE Id = @id";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@id", roleId);
 
@@ -77,7 +77,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         public string GetRoleId(string roleName)
         {
             string roleId = null;
-            string commandText = "SELECT \"Id\" FROM \"AspNetRoles\" WHERE \"Name\" = @name";
+            string commandText = "SELECT Id FROM AspNetRoles WHERE Name = @name";
             Dictionary<string, object> parameters = new Dictionary<string, object>() { { "@name", roleName } };
 
             var result = _database.QueryValue(commandText, parameters);
@@ -91,7 +91,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
 
         public int Update(IdentityRole<TKey> role)
         {
-            string commandText = "UPDATE \"AspNetRoles\" SET \"Name\" = @name WHERE \"Id\" = @id";
+            string commandText = "UPDATE AspNetRoles SET Name = @name WHERE Id = @id";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@id", role.Id);
 

@@ -46,7 +46,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public string GetUserName(string userId)
         {
-            string commandText = "SELECT \"UserName\" FROM \"" + _tableName + "\" WHERE \"Id\" = @id";
+            string commandText = "SELECT UserName FROM " + _tableName + " WHERE Id = @id";
             Dictionary<string, object> parameters = new Dictionary<string, object>() { { "@id", userId } };
 
             return _database.GetStrValue(commandText, parameters);
@@ -63,7 +63,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
             if (userName != null)
                 userName = userName.ToLower();
 
-            string commandText = "SELECT \"Id\" FROM \"" + _tableName + "\" WHERE LOWER(\"UserName\") = @name";
+            string commandText = "SELECT Id FROM " + _tableName + " WHERE LOWER(UserName) = @name";
             Dictionary<string, object> parameters = new Dictionary<string, object>() { { "@name", userName } };
 
             return _database.GetStrValue(commandText, parameters);
@@ -77,7 +77,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         public TUser GetUserById(string userId, ConverIdFromStringDelegate<TKey> stringToId)
         {
             TUser user = null;
-            string commandText = "SELECT * FROM \"" + _tableName + "\" WHERE \"Id\" = @id";
+            string commandText = "SELECT * FROM " + _tableName + " WHERE Id = @id";
             Dictionary<string, object> parameters = new Dictionary<string, object>() { { "@id", userId } };
 
             var rows = _database.Query(commandText, parameters);
@@ -108,7 +108,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
                 userName = userName.ToLower();
 
             List<TUser> users = new List<TUser>();
-            string commandText = "SELECT * FROM \"" + _tableName + "\" WHERE LOWER(\"UserName\") = @name";
+            string commandText = "SELECT * FROM " + _tableName + " WHERE LOWER(UserName) = @name";
             Dictionary<string, object> parameters = new Dictionary<string, object>() { { "@name", userName } };
 
             var rows = _database.Query(commandText, parameters);
@@ -139,7 +139,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
                 email = email.ToLower();
 
             List<TUser> users = new List<TUser>();
-            string commandText = "SELECT * FROM \"" + _tableName + "\" WHERE LOWER(\"Email\") = @email";
+            string commandText = "SELECT * FROM " + _tableName + " WHERE LOWER(Email) = @email";
             Dictionary<string, object> parameters = new Dictionary<string, object>() { { "@email", email } };
 
             var rows = _database.Query(commandText, parameters);
@@ -165,7 +165,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public string GetPasswordHash(string userId)
         {
-            string commandText = "SELECT \"PasswordHash\" FROM \"" + _tableName + "\" WHERE \"Id\" = @id";
+            string commandText = "SELECT PasswordHash FROM " + _tableName + " WHERE Id = @id";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@id", userId);
 
@@ -186,7 +186,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public int SetPasswordHash(string userId, string passwordHash)
         {
-            string commandText = "UPDATE \"" + _tableName + "\" SET \"PasswordHash\" = @pwdHash WHERE \"Id\" = @id";
+            string commandText = "UPDATE " + _tableName + " SET PasswordHash = @pwdHash WHERE Id = @id";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@pwdHash", passwordHash);
             parameters.Add("@id", userId);
@@ -201,7 +201,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public string GetSecurityStamp(string userId)
         {
-            string commandText = "SELECT \"SecurityStamp\" FROM \"" + _tableName + "\" WHERE \"Id\" = @id";
+            string commandText = "SELECT SecurityStamp FROM " + _tableName + " WHERE Id = @id";
             Dictionary<string, object> parameters = new Dictionary<string, object>() { { "@id", userId } };
             var result = _database.GetStrValue(commandText, parameters);
 
@@ -218,8 +218,8 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
             var lowerCaseEmail = user.Email == null ? null : user.Email.ToLower();
 
             string commandText = @"
-            INSERT INTO ""AspNetUsers""(""Id"", ""UserName"", ""PasswordHash"", ""SecurityStamp"", ""Email"", 
-                                        ""EmailConfirmed"")
+            INSERT INTO AspNetUsers(Id, UserName, PasswordHash, SecurityStamp, Email, 
+                                        EmailConfirmed)
             VALUES (@id, @name, @pwdHash, @SecStamp, @email, @emailconfirmed);";
 
             Dictionary<string, object> parameters = new Dictionary<string, object>();
@@ -240,7 +240,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public int Delete(string userId)
         {
-            string commandText = "DELETE FROM \"" + _tableName + "\" WHERE \"Id\" = @userId";
+            string commandText = "DELETE FROM " + _tableName + " WHERE Id = @userId";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@userId", userId);
 
@@ -257,10 +257,10 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
             var lowerCaseEmail = user.Email == null ? null : user.Email.ToLower();
 
             string commandText = @"
-                UPDATE ""AspNetUsers""
-                   SET ""UserName"" = @userName, ""PasswordHash"" = @pswHash, ""SecurityStamp"" = @secStamp, ""Email""= @email, 
-                       ""EmailConfirmed"" = @emailconfirmed,
-                 WHERE ""Id"" = @userId;";
+                UPDATE AspNetUsers
+                   SET UserName = @userName, PasswordHash = @pswHash, SecurityStamp = @secStamp, Email= @email, 
+                       EmailConfirmed = @emailconfirmed,
+                 WHERE Id = @userId;";
 
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@userName", user.UserName);
