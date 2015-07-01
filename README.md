@@ -1,20 +1,20 @@
-#﻿#Storage providers for (version 3 of) the ASP.NET Identity membership system.
+#﻿# Storage providers for the ASP.NET 5 Identity membership system
 
 ### Introduction
 
 Just launched this. More coming soon.
 
+
 ## Usage
 
 ### PostgreSQL
 
-You set everything up in the ConfigureServices method of the
-ASP.NET 5 Startup class.
+Set everything up in the ConfigureServices method of the Startup class.
 
-The relevant namespaces are:
+Note that the relevant namespaces are:
 
-    using AspNet.Identity.StorageProviders.Common;
-    using AspNet.Identity.StorageProviders.PostgreSQL;
+    AspNet.Identity.StorageProviders.Common;
+    AspNet.Identity.StorageProviders.PostgreSQL;
 
 You must first inject an instance of the PostgreSQLDatabase class like so:
 
@@ -52,7 +52,7 @@ You may then set up ASP.NET Identity something like so:
 
 Alpha quality. It's working for me for basic usage. 
 
-Show me you care and it will help me prioritize this over other stuff :-)
+Show me you care and it will help me prioritize this over other things :-)
 
 I intend to put a bit more work into this over the next week or so (including adding a MySql version).
 
