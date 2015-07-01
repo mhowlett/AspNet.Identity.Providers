@@ -2,7 +2,11 @@
 
 ### Introduction
 
-Just launched this. More coming soon.
+This repo will contain PostgreSQL and MySQL storage providers for the ASP.NET 5 Identity membership system. 
+
+Just got basic usage for the PostgreSQL version going. 
+
+More soon... 
 
 
 ## Usage
