@@ -1,5 +1,5 @@
 ﻿A PostgreSQL provider for (version 3 of) the ASP.NET Identity membership system
-Available from https://gihub.com/mhowlett/AspNet.Identity.StorageProviders
+Available from https://github.com/mhowlett/AspNet.Identity.StorageProviders
 
 This work is derived from:
 
