@@ -1,4 +1,4 @@
-#﻿# Storage providers for the ASP.NET 5 Identity membership system
+## Storage providers for the ASP.NET 5 Identity membership system
 
 ### Introduction
 
