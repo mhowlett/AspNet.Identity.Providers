@@ -34,10 +34,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
         /// <returns></returns>
         public List<string> RoleNamesForUserId(string userId)
         {
-            throw new NotImplementedException();
-
             var roles = new List<string>();
-            // TODO: This probably does not work, and may need testing.
             string commandText = "SELECT AspNetRoles.Name FROM AspNetUsers, AspNetRoles, AspNetUserRoles ";
             commandText += "WHERE AspNetUsers.Id = AspNetUserRoles.UserId AND AspNetUserRoles.RoleId = AspNetRoles.Id";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
