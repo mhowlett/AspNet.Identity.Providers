@@ -1,11 +1,13 @@
-﻿// A PostgreSQL provider for (version 3 of) the ASP.NET Identity membership system
-// For credits, copyright an license information refer to LICENSE.txt
+﻿// A PostgreSQL provider for (version 3 of) the ASP.NET Identity membership system.
+// For credits, copyright and license information refer to LICENSE.txt
+
+// Note: this file was taken directly from Microsoft's EF implementation.
 
 using System;
 using System.Collections.Generic;
 
 
-namespace AspNet.Identity.PostgreSQL
+namespace AspNet.Identity.StorageProviders.Common
 {
     public class IdentityUser : IdentityUser<string>
     {

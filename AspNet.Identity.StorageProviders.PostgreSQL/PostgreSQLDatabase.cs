@@ -8,7 +8,7 @@ using System.Data;
 using System.Threading;
 
 
-namespace AspNet.Identity.PostgreSQL
+namespace AspNet.Identity.StorageProviders.PostgreSQL
 {
     /// <summary>
     ///     Class that encapsulates PostgreSQL database connections and CRUD operations.

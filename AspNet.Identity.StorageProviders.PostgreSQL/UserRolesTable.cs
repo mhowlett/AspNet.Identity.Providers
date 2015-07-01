@@ -3,9 +3,10 @@
 
 using System;
 using System.Collections.Generic;
+using AspNet.Identity.StorageProviders.Common;
 
 
-namespace AspNet.Identity.PostgreSQL
+namespace AspNet.Identity.StorageProviders.PostgreSQL
 {
     /// <summary>
     /// Class that represents the AspNetUserRoles table in the PostgreSQL Database.

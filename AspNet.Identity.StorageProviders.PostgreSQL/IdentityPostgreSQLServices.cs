@@ -3,7 +3,7 @@
 
 using System;
 using Microsoft.Framework.DependencyInjection;
-using AspNet.Identity.PostgreSQL;
+using AspNet.Identity.StorageProviders.PostgreSQL;
 
 
 namespace Microsoft.AspNet.Identity

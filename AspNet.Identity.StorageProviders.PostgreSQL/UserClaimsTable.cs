@@ -3,9 +3,10 @@
 
 using System.Collections.Generic;
 using System.Security.Claims;
+using AspNet.Identity.StorageProviders.Common;
 
 
-namespace AspNet.Identity.PostgreSQL
+namespace AspNet.Identity.StorageProviders.PostgreSQL
 {
     /// <summary>
     /// Class that represents the AspNetUserClaims table in the PostgreSQL Database.

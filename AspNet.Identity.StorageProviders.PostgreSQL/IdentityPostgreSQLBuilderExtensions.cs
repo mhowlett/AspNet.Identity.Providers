@@ -2,7 +2,7 @@
 // For credits, copyright an license information refer to LICENSE.txt
 
 using Microsoft.AspNet.Identity;
-using AspNet.Identity.PostgreSQL;
+using AspNet.Identity.StorageProviders.PostgreSQL;
 using System;
 
 namespace Microsoft.Framework.DependencyInjection

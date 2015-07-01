@@ -9,9 +9,10 @@ using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
+using AspNet.Identity.StorageProviders.Common;
 
 
-namespace AspNet.Identity.PostgreSQL
+namespace AspNet.Identity.StorageProviders.PostgreSQL
 {
     public class UserStore : UserStore<IdentityUser<string>>
     {
