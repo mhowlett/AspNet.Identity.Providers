@@ -250,7 +250,7 @@ namespace AspNet.Identity.StorageProviders.PostgreSQL
 
         public bool TablesExist()
         {
-            return (bool)QueryValue("select exists(select * from information_schema.tables where table_name = 'AspNetUsers')", null);
+            return (bool)QueryValue("select exists(select * from information_schema.tables where table_name = 'aspnetusers')", null);
         }
 
         public void ExecuteCreateTablesScript()

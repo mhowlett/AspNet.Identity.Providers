@@ -3,10 +3,10 @@
 
 using System;
 using Microsoft.Framework.DependencyInjection;
-using AspNet.Identity.StorageProviders.PostgreSQL;
+using Microsoft.AspNet.Identity;
 
 
-namespace Microsoft.AspNet.Identity
+namespace AspNet.Identity.StorageProviders.PostgreSQL
 {
     /// <summary>
     /// Default services

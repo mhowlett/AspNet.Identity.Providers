@@ -2,10 +2,10 @@
 // For credits, copyright an license information refer to LICENSE.txt
 
 using Microsoft.AspNet.Identity;
-using AspNet.Identity.StorageProviders.PostgreSQL;
+using Microsoft.Framework.DependencyInjection;
 using System;
 
-namespace Microsoft.Framework.DependencyInjection
+namespace AspNet.Identity.StorageProviders.PostgreSQL
 {
     public static class IdentityPostgreSQLBuilderExtensions
     {
