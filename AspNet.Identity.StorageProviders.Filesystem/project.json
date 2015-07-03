@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+
+  "description": "MySql storage provider for the ASP.NET 5 Identity membership system (Identity version 3). For more information refer to https://github.com/mhowlett/AspNet.Identity.StorageProviders",
+
+  "dependencies": {
+    "Microsoft.AspNet.Identity": "3.0.0-beta5",
+    "Newtonsoft.Json": "7.0.1",
+    "AspNet.Identity.StorageProviders.Common": "0.1"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}

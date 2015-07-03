@@ -8,32 +8,22 @@ using System;
 
 namespace AspNet.Identity.StorageProviders.Common
 {
-    public class IdentityUserClaim : IdentityUserClaim<string> { }
+    public class IdentityUserRole : IdentityUserRole<string> { }
 
     /// <summary>
-    ///     EntityType that represents one specific user claim
+    ///     EntityType that represents a user belonging to a role
     /// </summary>
     /// <typeparam name="TKey"></typeparam>
-    public class IdentityUserClaim<TKey> where TKey : IEquatable<TKey>
+    public class IdentityUserRole<TKey> where TKey : IEquatable<TKey>
     {
         /// <summary>
-        ///     Primary key
-        /// </summary>
-        public virtual int Id { get; set; }
-
-        /// <summary>
-        ///     User Id for the user who owns this claim
+        ///     UserId for the user that is in the role
         /// </summary>
         public virtual TKey UserId { get; set; }
 
         /// <summary>
-        ///     Claim type
+        ///     RoleId for the role
         /// </summary>
-        public virtual string ClaimType { get; set; }
-
-        /// <summary>
-        ///     Claim value
-        /// </summary>
-        public virtual string ClaimValue { get; set; }
+        public virtual TKey RoleId { get; set; }
     }
 }
