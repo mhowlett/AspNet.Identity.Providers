@@ -2,11 +2,25 @@
 
 ### Introduction
 
-This repo will contain PostgreSQL and MySQL storage providers for the ASP.NET 5 Identity membership system. 
+This repo contains storage providers for the ASP.NET 5 Identity membership
+system. Currently there are two:
 
-Just got basic usage for the PostgreSQL version going. 
+ * Filesystem
+ * PostgreSQL
 
-More soon... 
+I also intend to implement providers for:
+
+ * MySQL
+ * Redis
+
+The goal is to provide functionality that just works and is suitable out-of-the-box for most scenarios. 
+
+
+## Quality
+
+Very alpha.
+
+I intend to put a bit more work into this over the next week or so.
 
 
 ## Usage
@@ -51,13 +65,6 @@ You may then set up ASP.NET Identity something like so:
         .AddPostgreSQLStores<PostgreSQLDatabase>()
         .AddDefaultTokenProviders();
 
-## Quality
-
-Alpha quality. It's working for me for basic usage. 
-
-Show me you care and it will help me prioritize this over other things :-)
-
-I intend to put a bit more work into this over the next week or so (including adding a MySql version).
 
 ## Roadmap
 
