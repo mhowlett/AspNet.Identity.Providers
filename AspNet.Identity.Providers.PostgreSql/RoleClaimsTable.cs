@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 
 
-namespace AspNet.Identity.StorageProviders.PostgreSQL
+namespace AspNet.Identity.Providers.PostgreSQL
 {
     public class RoleClaimsTable<TKey>
         where TKey : IEquatable<TKey>

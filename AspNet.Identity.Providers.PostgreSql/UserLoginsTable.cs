@@ -5,7 +5,7 @@ using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
 
 
-namespace AspNet.Identity.StorageProviders.PostgreSQL
+namespace AspNet.Identity.Providers.PostgreSQL
 {
     /// <summary>
     /// Class that represents the AspNetUserLogins table in the PostgreSQL Database.

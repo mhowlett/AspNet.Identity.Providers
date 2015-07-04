@@ -6,7 +6,7 @@
 using System;
 
 
-namespace AspNet.Identity.StorageProviders.Common
+namespace AspNet.Identity.Providers.Common
 {
     public class IdentityUserClaim : IdentityUserClaim<string> { }
 

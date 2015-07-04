@@ -8,11 +8,11 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
-using AspNet.Identity.StorageProviders.Common;
+using AspNet.Identity.Providers.Common;
 using Microsoft.AspNet.Identity;
 
 
-namespace AspNet.Identity.StorageProviders.Filesystem
+namespace AspNet.Identity.Providers.Filesystem
 {
     public class UserStore<TUser, TRole, TContext> :
         IUserLoginStore<TUser>,

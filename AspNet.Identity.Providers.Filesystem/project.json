@@ -6,7 +6,7 @@
   "dependencies": {
     "Microsoft.AspNet.Identity": "3.0.0-beta5",
     "Newtonsoft.Json": "7.0.1",
-    "AspNet.Identity.StorageProviders.Common": "0.1"
+    "AspNet.Identity.Providers.Common": "0.1"
   },
 
   "frameworks": {

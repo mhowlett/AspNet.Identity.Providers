@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace AspNet.Identity.StorageProviders.Common
+namespace AspNet.Identity.Providers.Common
 {
     /// <summary>
     ///     Represents a Role entity

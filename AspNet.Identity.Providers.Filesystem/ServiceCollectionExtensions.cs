@@ -2,10 +2,10 @@
 // For credits, copyright an license information refer to LICENSE.txt
 
 using Microsoft.Framework.DependencyInjection;
-using AspNet.Identity.StorageProviders.Common;
+using AspNet.Identity.Providers.Common;
 
 
-namespace AspNet.Identity.StorageProviders.Filesystem
+namespace AspNet.Identity.Providers.Filesystem
 {
     public static class ServiceCollectionExtensions
     {

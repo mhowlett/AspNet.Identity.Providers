@@ -7,13 +7,13 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Security.Claims;
-using AspNet.Identity.StorageProviders.Common;
+using AspNet.Identity.Providers.Common;
 using System.Collections.Generic;
 using Microsoft.AspNet.Identity;
 using Newtonsoft.Json;
 
 
-namespace AspNet.Identity.StorageProviders.Filesystem
+namespace AspNet.Identity.Providers.Filesystem
 {
     public class FilesystemContext : FilesystemContext<IdentityUser, IdentityRole>
     {

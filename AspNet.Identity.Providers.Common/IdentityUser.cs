@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace AspNet.Identity.StorageProviders.Common
+namespace AspNet.Identity.Providers.Common
 {
     public class IdentityUser : IdentityUser<string>
     {

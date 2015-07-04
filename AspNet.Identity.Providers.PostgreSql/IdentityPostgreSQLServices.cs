@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.AspNet.Identity;
 
-namespace AspNet.Identity.StorageProviders.PostgreSQL
+namespace AspNet.Identity.Providers.PostgreSQL
 {
     /// <summary>
     ///     Default services

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.AspNet.Identity;
 
-namespace AspNet.Identity.StorageProviders.PostgreSQL
+namespace AspNet.Identity.Providers.PostgreSQL
 {
     public static class IdentityPostgreSQLServiceCollectionExtensions
     {

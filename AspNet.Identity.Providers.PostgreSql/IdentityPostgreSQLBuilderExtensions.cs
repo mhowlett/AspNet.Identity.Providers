@@ -5,7 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Framework.DependencyInjection;
 using System;
 
-namespace AspNet.Identity.StorageProviders.PostgreSQL
+namespace AspNet.Identity.Providers.PostgreSQL
 {
     public static class IdentityPostgreSQLBuilderExtensions
     {
