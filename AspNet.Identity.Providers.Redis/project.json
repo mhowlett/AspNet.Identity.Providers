@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+
+  "description": "Redis storage provider for the ASP.NET 5 Identity membership system (Identity version 3). For more information refer to https://github.com/mhowlett/AspNet.Identity.Providers",
+
+  "dependencies": {
+    "Microsoft.AspNet.Identity": "3.0.0-beta5",
+    "AspNet.Identity.StorageProviders.Common": "0.1"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}
